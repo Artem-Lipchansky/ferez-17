@@ -1,9 +1,10 @@
 .team {
   background-color: #f5f4fa;
-
-  &__position {
-    color: $text-color;
-    margin-bottom: 16px;
+  @media screen and (max-width: 767px) {
+    &__position {
+      color: $text-color;
+      margin-bottom: 16px;
+    }
   }
 
   &__name {
@@ -15,6 +16,11 @@
   &__list {
     display: flex;
     gap: 30px;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+    }
   }
 
   &__item {
@@ -25,6 +31,16 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 4 * 15px) / 2);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: 1199px) {
+      flex-basis: calc((100% - 8 * 15px) / 4);
+      margin: 15px;
+    }
   }
 
   &__content {

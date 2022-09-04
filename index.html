@@ -21,10 +21,10 @@
     <!--<link rel="stylesheet" href="./css/index.css" />-->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
-  <body>
+  
     <!--------------header------------------------>
 
-    <header class="header">
+   <!--<header class="header">
       <div class="container main-line">
         <a class="logo" href="./index.html" lang="en"
           >Web<span class="logo__accent">Studio</span></a
@@ -53,11 +53,117 @@
               >+38 096 111 11 11</a
             >
           </li>
-        </ul>
+        </ul>--
+
+        <button class="menu-open-mobile">
+        <svg width="40" height="40">
+          <use class="menu-icon" href="./images/icons.svg#icon-menu-mob"></use>
+
+        </svg>
+      </button>
       </div>
+
+
+      <div class="mobile-menu is-hidden"></div>
+      <div class="container">
+        <div class="mobile-menu-top"></div>
+        <button type="button" class="menu-close">
+           <svg width="40" height="40">
+            <use class="menu-icon" href="./images/icons.svg#icon-close-mob">
+      </use>
+            
+           </svg>
+        </button>
+
+        <ul class="mobile-menu-list">
+              <li class="mobile-menu-item">
+                 <a href="./index.html" class="link mobile-current">Студия</a>
+              </li>
+              <li class="mobile-menu-item">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+                 <li class="mobile-menu-item">
+                <a href="/" class="link">Контакты</a>
+              </li>
+
+              
+
+
+      </div>
+
+      <div class="mobile-menu-bottom">
+            <ul class="mobile-contact">
+              <li class="mobile-contact-item">
+                <a href="tel:+380961111111" class="mobile-contact"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+               <li class="mobile-contact-item">
+                <a href="mailto:info@devstudio.com" 
+                class="mobile-mail">info@devstudio.com</a>
+
+                  </li>
+
+                  </ul>
+
+
+                    <li class="mobile-social-list">
+              <li class="mobile-social-item">
+                <a
+                  class="mobile-social-link"
+                  href="https://www.google.com/"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >Instagram</a
+                >
+                 </li>
+
+                 <li class="mobile-social-item">
+                <a
+                  class="mobile-social-link"
+                  href="https://www.google.com/"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >Twitter</a
+                >
+                  </li>
+                 <li class="mobile-social-item">
+                <a
+                  class="mobile-social-link"
+                  href="https://www.google.com/"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >Facebook</a
+                >
+               </li>
+                <li class="mobile-social-item">
+                <a
+                  class="mobile-social-link"
+                  href="https://www.google.com/"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
     </header>
-    <!--блок_герой-->
-    <main>
+
+      
+
+    <!-------блок-герой-------->
+
+  
+  
+  
+  
+     <main>
       <section class="hero">
         <div class="container">
           <h1
@@ -139,22 +245,28 @@
 
           <ul class="work__list">
             <li class="work__item" data-aos="fade-up-right">
-              <img src="./images/pic-1.jpg" alt="Разработка програм" width="370" height="294" />
+              <img srcset="./images/img-1.jpg 1x, ./images/img-1-2x.jpg 2x"
+                src="./images/img-1.jpg"
+                alt="Разработка програм"
+                width="376" />
               <p class="work__text">Десктопные приложения</p>
             </li>
 
             <li class="work__item" data-aos="fade-down">
               <img
-                src="./images/pic-2.jpg"
-                alt="Разработка мобильних приложений"
-                width="370"
-                height="294"
+                srcset="./images/img-2.jpg 1x, ./images/img-2-2x.jpg 2x"
+                src="./images/img-2.jpg"
+                alt="Разработка мобильных приложений"
+                width="376"
               />
               <p class="work__text">Мобильные приложения</p>
             </li>
 
             <li class="work__item" data-aos="fade-left">
-              <img src="./images/pic-3.jpg" alt="Разработка дизайна" width="370" height="294" />
+              <img srcset="./images/img-3.jpg 1x, ./images/img-3-2x.jpg 2x"
+                src="./images/img-3.jpg"
+                alt="Разработка дизайна"
+                width="376"/>
 
               <p class="work__text">Дизайнерские решения</p>
             </li>
@@ -166,13 +278,38 @@
 
       <section class="team section bg">
         <div class="container bg">
-          <h2 class="title" data-aos="zoom-out">Наша команда</h2>
+          <h2 class="title">Наша команда</h2>
           <ul class="team__list">
             <!--Игорь-->
             <li class="team__item">
               <div class="item">
-                <img src="./images/img-1.jpg" alt="Фото Игоря" width="270" class="team__img" />
+                
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team-img-1.jpg    1x,
+                      ./images/team-img-1-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team-img-1-tablet.jpg    1x,
+                      ./images/team-img-1-tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team-img-1-mobile.jpg    1x,
+                      ./images/team-img-1-mobile-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                <img src="./images/team-img-1.jpg" alt="Фото Игоря" width="270" class="team__img" />
+                </picture>
               </div>
+              
               <div class="team__content">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__position">Product Designer</p>
@@ -233,12 +370,47 @@
 
             <li class="team__item">
               <div class="item">
-                <img src="./images/img-2.jpg" alt="Ольга Репина" width="270" class="team__img" />
+                
+                  <picture>
+                  <source
+                    srcset="
+                      ./images/team-img-2.jpg    1x,
+                      ./images/team-img-2-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team-img-2-tablet.jpg    1x,
+                      ./images/team-img-2-tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team-img-2-mobile.jpg    1x,
+                      ./images/team-img-2-mobile-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="./images/team-img-2.jpg"
+                    alt="Ольга Репина"
+                    class="team__img"
+                  />
+                </picture>
+
+                
+                <img src="./images/team-img-2-2x.jpg" alt="Ольга Репина" width="270" class="team__img" />
+              
+                </picture>
               </div>
+              
 
               <div class="team__content">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__position">Frontend Developer</p>
+               
                 <ul class="team__social">
                   <li class="social__item">
                     <a
@@ -294,7 +466,40 @@
 
             <li class="team__item">
               <div class="item">
-                <img src="./images/img-3.jpg" alt="Николай Тарасов" width="270" class="team__img" />
+
+
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team-img-3.jpg    1x,
+                      ./images/team-img-3-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team-img-3-tablet.jpg    1x,
+                      ./images/team-img-3-tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team-img-3-mobile.jpg    1x,
+                      ./images/team-img-3-mobile-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="./images/team-img-3.jpg"
+                    alt="Николай Тарасов"
+                    class="team__img"
+                  />
+                </picture>
+
+
+
+                <!--<img src="./images/img-3.jpg" alt="Николай Тарасов" width="270" class="team__img" />-
               </div>
               <div class="team__content">
                 <h3 class="team__name">Николай Тарасов</h3>
@@ -354,6 +559,35 @@
 
             <li class="team__item">
               <div class="item">
+
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team-img-4.jpg    1x,
+                      ./images/team-img-4-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team-img-4-tablet.jpg    1x,
+                      ./images/team-img-4-tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team-img-4-mobile.jpg    1x,
+                      ./images/team-img-4-mobile-2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <img
+                    src="./images/team-img-4.jpg"
+                    alt="Михаил Ермаков"
+                    class="team__img"
+                  />
+                </picture>
                 <img src="./images/img-4.jpg" alt="Михаил Ермаков" width="270" class="team__img" />
               </div>
               <div class="team__content">
@@ -463,13 +697,13 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main>-->
 
     <!--Подвал-->
 
     <footer class="footer">
       <div class="container">
-        <!--<h2 class="visually-hidden">Наши контакты</h2>-->
+         <h2 class="visually-hidden">Наши контакты</h2>
         <div class="footer-content">
           <a class="footer-logo" href="./index.html" lang="en"
             >Web<span class="footer-logo-accent">Studio</span></a
@@ -638,6 +872,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

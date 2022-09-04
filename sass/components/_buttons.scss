@@ -43,6 +43,9 @@
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .button.secondary {
@@ -62,6 +65,9 @@
 .button-list {
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+  }
 }
 
 .button-list .current,
@@ -76,8 +82,10 @@
 
 .button-list .btn + .btn {
   margin-left: 8px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 15px;
+  }
 }
-
 .button-list .current-btn,
 .button.secondary:hover,
 .button.secondary:focus {
